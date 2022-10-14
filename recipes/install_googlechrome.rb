@@ -14,7 +14,7 @@
 
 windows_package 'install google chrome' do
         action :install
-        source  node['chrome']['msi']
+        source  node['chrome']['exe']
         installer_type :custom
       not_if do ::File.exists?('C:\Program Files\Google\Chrome\Application\chrome.exe') end
 end
